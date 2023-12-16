@@ -1,6 +1,6 @@
 *,
-*::before,
-*::after {
+*:before,
+*:after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -117,7 +117,7 @@ a {
 
 .header__user {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     gap: 30px;
 }
@@ -126,7 +126,7 @@ a {
 
 .header__burger {
     display: none;
-    position: fixed;
+    position: absolute;
     right: 4%;
     top: 10%;
     flex-direction: column;
@@ -174,7 +174,7 @@ a {
     display: none;
     align-items: center;
     padding-top: 6px;
-    position: fixed;
+    position: absolute;
     right: 4%;
     top: 9%;
     flex-direction: column;
@@ -182,7 +182,7 @@ a {
     align-items: center;
     gap: 5px;
     border-radius: 50%;
-    background-color:black;
+    background-color: black;
     border: 1px solid white;
 }
 
@@ -198,7 +198,7 @@ a {
     display: inline-block;
     width: 20px;
     height: 1.4px;
-    background-color:white;
+    background-color: white;
     transition: 0.5s linear;
 }
 
@@ -210,14 +210,15 @@ a {
     transition: 0.5s linear;
 }
 
-.modal{
+.modal {
+    display: none;
     width: 50%;
     height: 80%;
     right: -50%;
     transition: 0.5s linear;
     z-index: -1;
     background-color:black;
-    position:fixed;
+    position: fixed;
     top: 5%;
 }
 
@@ -231,12 +232,8 @@ a {
     opacity: 70%;
 }
 
-.main__wrraper {
-    padding: 199px 0px 198px 0px;
-    opacity: 100%;
-}
-
 .main__container {
+    padding: 198px 0px 198px 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -245,7 +242,7 @@ a {
 }
 
 .main__title {
-    width: 615px;
+    flex: 1;
     color: var(--globalcolor);
     font-size: 60px;
     font-style: normal;
@@ -255,7 +252,7 @@ a {
 }
 
 .main__text {
-    width: 535px;
+    flex: 1;
     color: var(--twoglobal);
     font-size: 18px;
     font-style: normal;
@@ -517,13 +514,17 @@ a {
     text-transform: uppercase;
 }
 
+/* =================================================Media================================== */
 
 @media(max-width:768px) {
+
+    /* ===============================Header================================ */
     .header__container {
         display: flex;
         justify-content: space-between;
         padding-right: 10%;
     }
+
     .header__list_link {
         font-size: 2.5vw;
     }
@@ -532,7 +533,7 @@ a {
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        position:absolute;
+        position: absolute;
         right: 2%;
     }
 
@@ -571,55 +572,117 @@ a {
         z-index: 2;
         order: 4;
     }
+
+    /* ==========================================================Navbar========================== */
+
+    .main__wrraper {
+        padding:198px 0px 198xp 0px;
+    }
+
+    .main__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .main__title {
+        flex: 1;
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    .main__text {
+        flex: 1;
+        display: flex;
+        font-size: 4vw;
+        text-align: center;
+    }
+
+    .main__btn__wrraper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .main__btn:nth-child(1){
+        flex: 1;
+    }
+    .main__btn:nth-child(2){
+        flex: 1;
+    }
+}
+.main__btn:nth-child(1){
+    flex: 1;
 }
 
 @media(max-width:425px) {
     .header__list {
         display: flex;
         align-items: end;
-        position:fixed;
+        position: fixed;
         flex-direction: column;
         z-index: 3;
         right: -40%;
         top: 40%;
         transition: 0.5s linear;
     }
-    .header__user{
+
+    .header__user {
         z-index: 2;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 10px;
-        position:fixed;
+        position: fixed;
         top: 25%;
-        right:-40%;
+        right: -40%;
         border-radius: 0px;
         transition: 0.5s linear;
     }
-    .header__user__link1{
+
+    .header__user__link1 {
         position: static;
     }
-    .header__user__link2{
+
+    .header__user__link2 {
         position: static;
     }
-    .header__user__link3{
+
+    .header__user__link3 {
         position: static;
     }
-    .header__burger_2{
+
+    .header__burger_2 {
         display: none;
     }
-    .header__burger{
+
+    .header__burger {
         display: flex;
         z-index: 1;
     }
-    .active__user{
+
+    .active__user {
         right: 15%;
     }
-    .active__list{
-        right:10% ;
+
+    .active__list {
+        right: 10%;
     }
-    .active__modal{
+
+    .active__modal {
         right: 0%;
+    }
+
+    /* =============================main======================== */
+
+    .main__title{
+        flex: 1;
+        font-size: 4vw;
+    }
+    .main__text{
+        width: 200px;
+        font-size: 4vw;
     }
 
 }
