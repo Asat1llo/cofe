@@ -128,7 +128,7 @@ a {
     display: none;
     position: fixed;
     right: 4%;
-    top: 24%;
+    top: 10%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -176,7 +176,7 @@ a {
     padding-top: 6px;
     position: fixed;
     right: 4%;
-    top: 18%;
+    top: 9%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -216,11 +216,10 @@ a {
     padding-bottom: 100%;
     right: -50%;
     transition: 0.5s linear;
-    /* animation-timing-function: 0.5s linear; */
     z-index: -1;
     background-color:black;
     position:fixed;
-    top: 9%;
+    top: 2%;
 }
 
 /* ==========================================main============================ */
@@ -612,7 +611,6 @@ a {
     }
     .header__burger{
         display: flex;
-        top: 20%;
         z-index: 1;
     }
     .active__user{
