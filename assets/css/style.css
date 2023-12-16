@@ -87,6 +87,7 @@ a {
 }
 
 .header__container {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -116,7 +117,7 @@ a {
 
 .header__user {
     display: flex;
-    justify-content: space-around;
+    justify-content:space-between;
     align-items: center;
     gap: 30px;
 }
@@ -125,6 +126,10 @@ a {
 
 .header__burger {
     display: none;
+    position: fixed;
+    right: 4%;
+    top: 24%;
+    z-index: -2;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -168,6 +173,9 @@ a {
     width: 40px;
     height: 40px;
     display: none;
+    position: fixed;
+    right: 4%;
+    top: 15%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -499,7 +507,9 @@ a {
 
 @media(max-width:768px) {
     .header__container {
+        display: flex;
         justify-content: space-between;
+        padding-right: 10%;
     }
 
     .header__list {
@@ -619,7 +629,7 @@ a {
         right: -50%;
         transition: 0.5s linear;
         /* animation-timing-function: 0.5s linear; */
-        z-index: 1;
+        z-index: -1;
         background-color:black;
         position:fixed;
         top: 9%;
