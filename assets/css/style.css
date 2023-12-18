@@ -299,7 +299,7 @@ a {
 .cards__about__item {
     flex: 1; 
     background-color: red;
-    height: 288px;
+    height: 328px;
     border-radius: 10px 0px 0px 10px;
     background-image: url("../images/main/card_img.png");
     background-position: center;
@@ -344,8 +344,9 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     gap: 40px;
+    padding-left:30px;
 }
 
 .cards__wrraper__title {
@@ -358,10 +359,11 @@ a {
 }
 
 .cards__container_2 {
+    flex: 1;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items:center;
     gap: 21px;
 }
 
@@ -381,7 +383,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     gap: 30px;
 }
 
@@ -433,7 +435,6 @@ a {
 .cards__news__container {
     flex: 1;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 21px;
